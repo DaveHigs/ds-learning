@@ -553,6 +553,19 @@ pywin32 = {version = ">=1.0", markers = "sys_platform == \"win32\" and platform_
 traitlets = "*"
 
 [[package]]
+name = "jupyter-kite"
+version = "2.0.2"
+description = "Multi-Language Server WebSocket proxy for JupyterLab server."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+entrypoints = "*"
+jupyter_server = ">=1.1.2"
+tornado = ">=5.1.0"
+
+[[package]]
 name = "jupyter-server"
 version = "1.13.4"
 description = "The backend—i.e. core services, APIs, and REST endpoints—to Jupyter web applications."
@@ -582,6 +595,20 @@ websocket-client = "*"
 test = ["coverage", "pytest (>=6.0)", "pytest-cov", "pytest-mock", "requests", "pytest-tornasync", "pytest-console-scripts", "ipykernel"]
 
 [[package]]
+name = "jupyter-tabnine"
+version = "1.2.3"
+description = "Jupyter notebook extension which support coding auto-completion based on Deep Learning"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+ipython = "*"
+jupyter-core = "*"
+nbconvert = "*"
+notebook = ">=4.2"
+
+[[package]]
 name = "jupyterlab"
 version = "3.2.8"
 description = "JupyterLab computational environment"
@@ -602,6 +629,18 @@ tornado = ">=6.1.0"
 [package.extras]
 test = ["coverage", "pytest (>=6.0)", "pytest-cov", "pytest-console-scripts", "pytest-check-links (>=0.5)", "jupyterlab-server[test] (>=2.2,<3.0)", "requests", "requests-cache", "virtualenv", "check-manifest"]
 ui-tests = ["build"]
+
+[[package]]
+name = "jupyterlab-kite"
+version = "2.0.2"
+description = "Kite integration for JupyterLab"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+jupyter_kite = ">=2.0.0"
+jupyterlab = ">=3.0.0,<4.0.0a0"
 
 [[package]]
 name = "jupyterlab-pygments"
@@ -1451,7 +1490,7 @@ notebook = ">=4.4.1"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "625a7984e1b1a4d270b316e1090606bc2e781a37dcd6c5341bcda7a5bbe18b55"
+content-hash = "a98d4605d2326f74b64664fda818c5746f9e6566ee0ff9ccc9e9bf9b5158149d"
 
 [metadata.files]
 anyio = [
@@ -1843,13 +1882,23 @@ jupyter-core = [
     {file = "jupyter_core-4.9.1-py3-none-any.whl", hash = "sha256:1c091f3bbefd6f2a8782f2c1db662ca8478ac240e962ae2c66f0b87c818154ea"},
     {file = "jupyter_core-4.9.1.tar.gz", hash = "sha256:dce8a7499da5a53ae3afd5a9f4b02e5df1d57250cf48f3ad79da23b4778cd6fa"},
 ]
+jupyter-kite = [
+    {file = "jupyter-kite-2.0.2.tar.gz", hash = "sha256:adbbfb8b7c34bbd22ec198efa66642e9a387122a14cfeef21926ee6701db2427"},
+]
 jupyter-server = [
     {file = "jupyter_server-1.13.4-py3-none-any.whl", hash = "sha256:3a1df2e27a322e84c028e52272e6ff72fd875f9a74c84409263c5c2f1afbf6fa"},
     {file = "jupyter_server-1.13.4.tar.gz", hash = "sha256:5fb5a219385338b1d13a013a68f54688b6a69ecff4e757fd230e27ecacdbf212"},
 ]
+jupyter-tabnine = [
+    {file = "jupyter_tabnine-1.2.3-py2.py3-none-any.whl", hash = "sha256:0a49f0f64f71e0a892c260a089fd0b32e8b5a6ac4f3c3125345c3fe38ed5880d"},
+    {file = "jupyter_tabnine-1.2.3.tar.gz", hash = "sha256:f066e6bbc5a25cf5390849bf82359356a532a2d170dd388d2aaa7b3dfa838308"},
+]
 jupyterlab = [
     {file = "jupyterlab-3.2.8-py3-none-any.whl", hash = "sha256:43c87a6686715091607ab12e30f51dc259955f5862c5c61a9b1adc860e9b7f91"},
     {file = "jupyterlab-3.2.8.tar.gz", hash = "sha256:5e4e99868c4f385372686767781408acbb9004b690b198b45597ba869802334b"},
+]
+jupyterlab-kite = [
+    {file = "jupyterlab-kite-2.0.2.tar.gz", hash = "sha256:d7b4247289f32a3b2c056b913377cb19f81b937d0e7c1749c4fcc8d26aef7eea"},
 ]
 jupyterlab-pygments = [
     {file = "jupyterlab_pygments-0.1.2-py2.py3-none-any.whl", hash = "sha256:abfb880fd1561987efaefcb2d2ac75145d2a5d0139b1876d5be806e32f630008"},
