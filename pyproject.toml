@@ -15,7 +15,6 @@ pyarrow = "^6.0.1"
 fastparquet = "^0.7.2"
 python-language-server = "^0.36.2"
 pynvim = "^0.4.3"
-jupyterlab-kite = "^2.0.2"
 jupyter-tabnine = "^1.2.3"
 
 
